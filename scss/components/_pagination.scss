@@ -1,0 +1,55 @@
+.pagination {
+   @include site_width;
+
+   background-color: $white01;
+   min-height: 90px;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 40px;
+   border-radius: 10px;
+
+   &-arrow {
+      @include percentage(200);
+      @include icon(arrow);
+
+      display: flex;
+      align-self: stretch;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid $grey01;
+
+      &::before {
+         color: #3a405b;
+         font-size: 15px;
+      }
+   }
+
+   &-prev {
+      transform: rotate(180deg);
+   }
+
+   &-list {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      justify-content: center;
+   }
+
+   &-item {
+
+      &+& {
+         margin-left: 6.5%;
+      }
+
+      &-active {
+         border-radius: 50%;
+         padding: 0 21px;
+         background-color: rgb(255, 255, 255);
+         box-shadow: 0px 20px 40px 0px rgba(168, 172, 185, 0.62);
+      }
+   }
+
+   &-link {
+      @include font_stack('Montserrat', 14px, $blue01, $regular, 52px);
+   }
+}

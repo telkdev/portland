@@ -1,0 +1,174 @@
+.product {
+   @include percentage(870);
+
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+   &-list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   &-item {
+      @include percentage(270, 870);
+
+      background: $white01;
+      border-radius: 10px;
+      margin-bottom: 30px;
+
+      &-middle {
+         @include percentage(570, 870);
+
+         padding: 0;
+         overflow: hidden;
+         background: $white01;
+         border-radius: 10px;
+         position: relative;
+      }
+   }
+
+   &-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 8% 25px;
+   }
+
+   &-image {
+      @include absolute_centering;
+
+      &-wrapper {
+         height: 220px;
+         width: 77%;
+         position: relative;
+         margin-bottom: 30px;
+
+         &-middle {
+            width: 100%;
+            position: relative;
+            height: 310px;
+            overflow: hidden;
+         }
+
+         &-banner {
+            height: 380px;
+         }
+      }
+
+      &-banner {
+         height: 100%;
+      }
+   }
+
+   &-title {
+      @include font_stack('Montserrat', 16px, $blue03, $regular);
+
+      margin-bottom: 10px;
+      text-align: center;
+
+      &-middle {
+         @include font_stack('Montserrat', 16px, $black02, $regular);
+
+         margin-bottom: 10px;
+      }
+   }
+
+   &-color {
+      @include font_stack('Montserrat', 12px, $grey08, $regular);
+
+      text-transform: uppercase;
+      margin-bottom: 20px;
+   }
+
+   &-price {
+      @include font_stack('Montserrat', 14px, $blue01, $regular);
+
+      &-middle {
+         @include font_stack('Montserrat', 12px, $white01, $regular);
+
+         position: absolute;
+         top: 15px;
+         left: 15px;
+         background: $black01;
+         padding: 7px;
+         border-radius: 5px;
+      }
+   }
+
+   &-content {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &-memory {
+      @include font_stack('Montserrat', 11px, $blue05, $regular);
+
+      text-transform: uppercase;
+      display: inline-block;
+      width: 50%;
+      border-right: 1px solid $grey09;
+   }
+
+   &-submit {
+      @include font_stack('Montserrat', 11px, $blue05, $regular);
+
+      text-transform: uppercase;
+      display: inline-block;
+      width: 50%;
+   }
+
+   &-action {
+      @include percentage(230, 570);
+
+      border: 1px solid $grey09;
+      font-size: 0;
+      display: flex;
+      text-align: center;
+      line-height: 33px;
+      border-radius: 25px;
+   }
+
+   &-banner {
+      border-radius: 10px;
+      overflow: hidden;
+
+      &-link {
+         padding: 0;
+         position: relative;
+         text-align: center;
+      }
+
+      &-image {
+         height: 100%;
+
+         &-wrapper {
+            position: relative;
+            height: 405px;
+            width: 100%;
+         }
+      }
+
+      &-info {
+         position: absolute;
+         top: 0;
+         left: 0;
+         padding: 40px 10%;
+      }
+
+      &-title {
+         @include font_stack('Montserrat', 16px, $blue06, $regular);
+
+         margin-bottom: 15px;
+         text-align: center;
+      }
+
+      &-price {
+         @include font_stack('Montserrat', 14px, $grey10, $regular);
+      }
+   }
+}

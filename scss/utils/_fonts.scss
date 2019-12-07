@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('../crimson/CrimsonText-Roman.eot');
+    src: url('../crimson/CrimsonText-Roman.eot?#iefix') format('embedded-opentype'),
+        url('../crimson/CrimsonText-Roman.woff2') format('woff2'),
+        url('../crimson/CrimsonText-Roman.woff') format('woff'),
+        url('../crimson/CrimsonText-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('../crimson/CrimsonText-Italic.eot');
+    src: url('../crimson/CrimsonText-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../crimson/CrimsonText-Italic.woff2') format('woff2'),
+        url('../crimson/CrimsonText-Italic.woff') format('woff'),
+        url('../crimson/CrimsonText-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Black.eot');
+    src: url('../fonts/montserrat/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/montserrat/Montserrat-Black.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Regular.eot');
+    src: url('../fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satisfy';
+    src: url('../fonts/satisfy/Satisfy-Regular.woff2') format('woff2'),
+        url('../fonts/satisfy/Satisfy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

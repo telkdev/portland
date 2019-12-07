@@ -1,0 +1,29 @@
+.minicart {
+	@include font_stack('Montserrat', 11px, $blue01, $regular);
+
+	margin-right: 2.56%;
+	padding-left: 20px;
+
+	&-link {
+		@include icon(cart);
+
+		text-transform: uppercase;
+		position: relative;
+		margin-right: 7px;
+
+		&::before {
+			@include vertical_centering;
+
+			right: 100%;
+			margin-right: 5px;
+			font-size: 18px;
+			color: $blue01;
+		}
+	}
+
+	&-count {
+		border-radius: 25px;
+		background: $grey05;
+		padding: 8px 10px;
+	}
+}

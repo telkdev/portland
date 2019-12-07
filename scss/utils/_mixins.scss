@@ -1,0 +1,192 @@
+/********************
+*********************
+CREATING INLINE BLOCK
+*********************
+********************/
+@mixin inline_block($valign: top) {
+	display: inline-block;
+	vertical-align: $valign;
+}
+
+/********************
+*********************
+SITE WIDTH
+*********************
+********************/
+@mixin site_width($width: 1170px) {
+	width: 100%;
+	max-width: $width;
+	margin: 0 auto;
+}
+
+/********************
+*********************
+CLEAR FIX 
+*********************
+********************/
+@mixin clear_fix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+}
+
+/********************
+*********************
+ABSOLUTE HORIZONTAL CENTERING 
+*********************
+********************/
+@mixin horizontal_centering {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/********************
+*********************
+ABSOLUTE VERTICAL CENTERING 
+*********************
+********************/
+@mixin vertical_centering {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/********************
+*********************
+ABSOLUTE CENTERING
+*********************
+********************/
+@mixin absolute_centering {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/********************
+*********************
+CENTERING IMAGE
+*********************
+********************/
+@mixin image_centring {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+}
+
+/********************
+*********************
+CALCULATING PX IN %
+*********************
+********************/
+@mixin percentage($current, $parent: $site_width) {
+	width: $current / $parent * 100%;
+}
+
+@function calc_percent($current, $parrent) {
+	@return $current/$parrent * 100%;
+}
+
+/********************
+*********************
+ADD PADDINGS FOR EXACT SIDE(NEED APPROVE)
+*********************
+********************/
+// @mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+// 	padding-top: $top;
+// 	padding-right: $right;
+// 	padding-bottom: $bottom;
+// 	padding-left: $left;
+// }
+
+/********************
+*********************
+ADD MARGIN EXACT SIDE
+*********************
+********************/
+@mixin margin($num, $side: all) {
+	@if $side==all {
+		margin: $num * 1px;
+	}
+
+	@else {
+		margin-#{$side}: $num * 1px;
+	}
+}
+
+/********************
+*********************
+SHORTCUT FOR PSEUDO ELEMENTS
+*********************
+********************/
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+/********************
+*********************
+SHORTCUT FOR TRIANGLES
+*********************
+********************/
+@mixin triangle($color:$black, $side: top, $size: 10px) {
+	width: 0;
+	height: 0;
+
+	@if $side==bottom {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	}
+
+	@else if $side==top {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	}
+
+	@else if $side==right {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	}
+
+	@else if $side==left {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+	}
+}
+
+/********************
+*********************
+SHORTCUT FOR FONTS
+*********************
+********************/
+@mixin font_stack($font-family, $size: false, $color: false, $weight: false, $lh: false) {
+	font-family: $font-family;
+
+	@if $size {
+		font-size: $size;
+	}
+
+	@if $color {
+		color: $color;
+	}
+
+	@if $weight {
+		font-weight: $weight;
+	}
+
+	@if $lh {
+		line-height: $lh;
+	}
+}

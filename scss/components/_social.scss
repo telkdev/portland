@@ -1,0 +1,27 @@
+.social {
+   @include percentage(100);
+
+   &-list {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &-link {
+      &::before {
+         font-size: 15px;
+         color: $white01;
+      }
+   }
+}
+
+.twitter {
+   @include icon(twitter);
+}
+
+.facebook {
+   @include icon(facebook);
+}
+
+.google {
+   @include icon(google-plus);
+}

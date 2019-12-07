@@ -1,0 +1,75 @@
+.footer {
+   background: $black02;
+
+   &-inner {
+      @include site_width;
+   }
+
+   &-content,
+   &-info {
+      align-items: center;
+      min-height: 150px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &-content {
+      border-bottom: 1px solid $black04;
+   }
+
+   &-logo {
+      &-link {
+         color: $white01;
+      }
+   }
+
+   // HOW NOT TO DUPLICATE FLEX GROW?
+   // DO WE NEED TO WRITE FLEX GROW TO ALL ITEMS?
+   &-nav {
+      display: flex;
+      flex-grow: 1;
+
+      &-list {
+         display: flex;
+         justify-content: center;
+         flex-grow: 1;
+      }
+
+      &-item {
+         &+& {
+            margin-left: 2.564%;
+         }
+      }
+
+      &-link {
+         @include font_stack('Montserrat', 12px, $white01, $regular);
+
+         text-transform: uppercase;
+      }
+   }
+
+   &-text {
+      @include percentage(520);
+      @include font_stack('Crimson', 14px, $white01, $regular, 22px);
+
+      font-style: italic;
+      opacity: 0.3;
+   }
+
+   &-copyright {
+      @include percentage(400);
+
+      text-align: right;
+
+      &-link {
+         @include font_stack('Crimson', 14px, $white01, $regular, 22px);
+
+         text-transform: uppercase;
+         opacity: 0.3;
+
+         &+& {
+            margin-left: 7.5%;
+         }
+      }
+   }
+}

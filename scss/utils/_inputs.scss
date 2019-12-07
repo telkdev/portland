@@ -1,0 +1,178 @@
+@mixin input($width) {
+   padding: 0 10px;
+   border-radius: 20px;
+   background-color: $grey01;
+   color: $blue01;
+   font-size: 13px;
+   text-transform: capitalize;
+   width: $width;
+   border: 2px solid $grey02;
+   line-height: 30px;
+
+   &::placeholder {
+      color: $grey03;
+      font-size: 13px;
+   }
+}
+
+@mixin select {
+   @include icon(arrow);
+
+   position: relative;
+   background-color: $white01;
+
+   &::before {
+      position: absolute;
+      top: 50%;
+      right: 11px;
+      transform: rotate(90deg);
+      font-size: 11px;
+      margin-top: -6px;
+      color: $blue04;
+   }
+
+   &:hover {
+      &::before {
+         cursor: pointer;
+      }
+   }
+}
+
+@mixin like_radio {
+   @include icon(check);
+
+   position: relative;
+
+   &::after {
+      @include vertical_centering;
+
+      content: "";
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border: 2px solid $grey01;
+      border-radius: 50%;
+   }
+
+   &::before {
+      @include vertical_centering;
+
+      font-size: 10px;
+      left: 4px;
+      color: $white01;
+      display: none;
+   }
+
+   &:hover {
+      &::after {
+         cursor: pointer;
+      }
+   }
+}
+
+@mixin radio {
+   position: relative;
+
+   &::after {
+      @include vertical_centering;
+
+      content: '';
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border: 2px solid $grey01;
+      border-radius: 50%;
+   }
+
+   &::before {
+      @include vertical_centering;
+
+      content: '';
+      left: 6px;
+      width: 6px;
+      height: 6px;
+      display: none;
+      background-color: $green01;
+      border-radius: 50%;
+   }
+
+   &:hover {
+      &::after {
+         cursor: pointer;
+      }
+   }
+}
+
+@mixin custom_checkbox {
+   @include icon(check);
+
+   position: relative;
+
+   &::after {
+      @include vertical_centering;
+
+      content: "";
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $grey01;
+      border-radius: 5px;
+   }
+
+   &::before {
+      @include vertical_centering;
+
+      font-size: 10px;
+      left: 4px;
+      color: $white01;
+      display: none;
+   }
+
+   &:hover {
+      &::after {
+         cursor: pointer;
+      }
+   }
+}
+
+// COMMON CLASSES WITH THIS MIXINS 
+
+.custom_checkbox {
+   @include custom_checkbox;
+}
+
+.radio {
+   @include radio;
+}
+
+.input {
+
+   &-radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: absolute;
+
+      &:checked+.radio::before {
+         display: block;
+         z-index: 10;
+      }
+   }
+
+   &-checkbox {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: absolute;
+
+      &:checked+.custom_checkbox::before {
+         display: block;
+         z-index: 10;
+      }
+
+      &:checked+.custom_checkbox::after {
+         border: none;
+         background-color: $green01;
+      }
+   }
+}

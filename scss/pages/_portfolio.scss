@@ -1,0 +1,98 @@
+.portfolio {
+	background: $white01;
+	padding: 75px 0;
+
+	&-inner {
+		@include site_width;
+
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+	}
+
+	&-title {
+		@include font_stack('Arial', 40px, $black01, $bold, 40px);
+
+		margin-bottom: 35px;
+	}
+
+	&-description {
+		@include font_stack('Arial', 18px, $black01, $regular, 26px);
+		@include percentage($site_width, 520);
+
+		margin-bottom: 70px;
+	}
+
+	&-nav {
+		margin-bottom: 80px;
+
+		&-list {
+			display: flex;
+		}
+
+		&-item {
+			& + & {
+				margin-left: 10px;
+			}
+		}
+
+		&-link {
+			@include font_stack('Arial', 18px, $black01, $regular, 40px);
+
+			border: 1px solid $black01;
+			border-radius: 5px;
+			text-transform: uppercase;
+			padding: 10px 25px;
+
+			&:hover {
+				background: $black01;
+				color: $white01;
+			}
+		}
+	}
+
+	&-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&-item {
+		width: 30%;
+		text-align: center;
+		margin-bottom: 25px;
+
+		&-title {
+			@include font_stack('Arial', 20px, $black01, $regular, 22px);
+
+			margin-bottom: 5px;
+		}
+
+		&-subtitle {
+			@include font_stack('Arial', 14px, $grey01, $regular, 22px);
+		}
+	}
+
+	&-image {
+		vertical-align: top;
+		max-height: 100%;
+
+		&-wrapper {
+			height: 300px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&-submit {
+		@include font_stack('Arial', 18px, $black01, $regular, 60px);	
+		
+		padding: 0 60px;
+		text-transform: uppercase;
+		border: 2px solid $black01;	
+
+		&:hover {
+			color: $white01;
+			background: $black01;
+		}
+	}
+}

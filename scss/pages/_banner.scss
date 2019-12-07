@@ -1,0 +1,122 @@
+.banner {
+	min-height: 500px;
+	background: $black03;
+
+	&-inner {
+		@include site_width;
+
+		position: relative;
+	}
+
+	&-image {
+		&-wrapper {
+			flex-basis: 32.2%;
+		}
+	}
+
+	&-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 8%;
+	}
+
+	&-info {
+		flex-basis: 43%;
+	}
+
+	&-header {
+		margin-bottom: 30px;
+	}
+
+	&-title,
+	&-color {
+		@include font_stack('Montserrat', 42px, $white01, $black);
+	}
+
+	&-description {
+		@include font_stack('Crimson', 16px, $white01, $regular, 24px);
+
+		margin-bottom: 70px;
+	}
+
+	&-link {
+		@include font_stack('Montserrat', 11px, $white01, $regular, 45px);
+
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 0 50px;
+		background: $blue08;
+		border-radius: 25px;
+	}
+
+	&-nav {
+		@include horizontal_centering;
+
+		bottom: 30px;
+		font-size: 0;
+		z-index: 20;
+	}
+
+	&-dot {
+		width: 9px;
+		height: 9px;
+		display: inline-block;
+		border: 2px solid $grey08;
+		border-radius: 50%;
+		margin-left: 10px;
+		cursor: pointer;
+
+		&.active {
+			width: 9px;
+			height: 9px;
+			display: inline-block;
+			border-radius: 50%;
+			background: $white01;
+			border-color: $white01;
+		}
+	}
+
+	&-controls {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&-control {
+		@include icon(arrow);
+		@include vertical_centering;
+
+		z-index: 30;
+		height: 42px;
+		width: 42px;
+		border: 2px solid $grey10;
+		display: flex;
+		justify-content: center;
+		border-radius: 50%;
+		align-items: center;
+		cursor: pointer;
+
+		&-prev {
+			left: 0;
+
+			&::before {
+				font-size: 12px;
+				color: $white01;
+				transform: rotate(180deg);
+			}
+		}
+
+		&-next {
+			right: 0;
+
+			&::before {
+				font-size: 12px;
+				color: $white01;
+			}
+		}
+	}
+}

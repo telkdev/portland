@@ -1,0 +1,74 @@
+.refinements {
+
+   &-attributes,
+   &-condition,
+   &-delivery {
+      background: $white01;
+      border-radius: 10px;
+      margin-bottom: 30px;
+   }
+
+   &-brands {
+      border-top: 1px solid $grey01;
+   }
+
+   &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid $grey01;
+
+      &-link {
+         @include font_stack('Montserrat', 11px, $blue08, $regular);
+
+         text-transform: uppercase;
+         text-decoration: underline;
+      }
+   }
+
+   &-delivery {
+      &-selection {
+         display: flex;
+         justify-content: space-between;
+         padding: 0;
+      }
+
+      &-choise {
+         flex: 1 0 0;
+         padding: 20px 0;
+
+         &+& {
+            border-left: 1px solid $grey01;
+         }
+      }
+
+      &-attributes_label {
+         @include font_stack('Montserrat', 13px, $blue01, $regular, 50px);
+
+         text-transform: uppercase;
+         padding-left: 30px;
+      }
+   }
+
+   &-selection {
+      padding: 10px 0;
+   }
+
+   &-attributes_label {
+      @include font_stack('Montserrat', 13px, $blue01, $regular, 36px);
+
+      padding-left: 30px;
+   }
+
+   &-choise {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+   }
+
+   &-count {
+      @include font_stack('Montserrat', 11px, $grey08, $regular);
+   }
+}

@@ -1,0 +1,8 @@
+.products {
+   &-inner {
+      @include site_width;
+
+      display: flex;
+      justify-content: space-between;
+   }
+}

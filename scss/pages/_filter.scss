@@ -1,0 +1,105 @@
+.filter {
+	@include site_width(1170px);
+
+	padding: 0 1.7094%;
+	margin-bottom: 50px;
+	border-radius: 5px;
+	background-color: $white01;
+
+	&-form {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-type {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-match {
+			@include percentage(245);
+		}
+
+		&-ship {
+			@include percentage(245);
+
+			padding: 0 2.5%;
+		}
+
+		&-price {
+			width: 29%;
+		}
+	}
+
+	&-divide {
+		margin-left: 5%;
+		color: $blue02;
+	}
+
+	&-attributes {
+		border-left: 1px solid $grey01;
+		border-right: 1px solid $grey01;
+		display: flex;
+		justify-content: space-between;
+		width: 60%;
+		padding: 0 4% 0 3%;
+	}
+
+	&-select {
+		@include font_stack('Montserrat', 11px, $blue01, $regular);
+
+		text-transform: uppercase;
+		padding-right: 25px;
+
+		&-wrapper {
+			@include select;
+
+			text-align: center;
+		}
+	}
+
+	&-input {
+		@include input(69%);
+	}
+
+	&-price {
+		@include input(40%);
+
+		margin-left: 5%;
+
+		&::placeholder {
+			color: $blue01;
+		}
+	}
+
+	&-title {
+		@include font_stack('Montserrat', 11px, $blue02, $regular, 55px);
+
+		text-transform: uppercase;
+	}
+
+	&-label {
+		@include font_stack('Montserrat', 13px, $blue01, $regular);
+		@include like_radio;
+
+		padding-left: 30px;
+		text-transform: capitalize;
+	}
+
+	&-checkbox {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		position: absolute;
+
+		&:checked+.filter-label::after {
+			border: none;
+			background-color: $green01;
+		}
+
+		&:checked+.filter-label::before {
+			display: block;
+			z-index: 10;
+		}
+	}
+}

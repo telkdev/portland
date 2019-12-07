@@ -1,0 +1,70 @@
+// html {
+//     font-size: $primary-font-size;
+// }
+
+// body {
+//     font-size: $primary-font-size;
+//     font-family: $font-stack;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-weight: $light;
+//     font-style: normal;
+// }
+
+// p {
+//     font-weight: $regular;
+//     font-style: normal;
+// }
+
+img {
+	width: 100%;
+	display: block;
+}
+
+// .main {
+//     background: $white01;
+// }
+
+/*******************
+********************
+CREATE BELOW COMMON CLASSES
+********************
+*******************/
+
+.input {
+	background-color: $grey01;
+	border-radius: 10px;
+	border: 1px solid $grey02;
+	color: $blue01;
+	font-size: 13px;
+	line-height: 30px;
+
+	&::placeholder {
+		color: $grey03;
+		font-size: 13px;
+	}
+}
+
+.content {
+	background-color: $grey04;
+	padding-top: 55px;
+}
+
+.main_title {
+	@include font_stack('Montserrat', 11px, $blue01, $regular);
+
+	text-transform: uppercase;
+	line-height: 50px;
+}
+
+
+.owl-prev.disabled,
+.owl-next.disabled {
+	display: none;
+}

@@ -1,0 +1,69 @@
+.refinements {
+   @include percentage(270);
+
+   &-navigation {
+      margin-bottom: 30px;
+      background: $white01;
+      border-radius: 10px;
+   }
+
+   &-item {
+      position: relative;
+
+      &+& {
+         border-top: 1px solid $grey01;
+      }
+   }
+
+   &-check {
+      display: none;
+
+      &:checked~.refinements-sublist {
+         display: block;
+         width: 100%;
+      }
+
+      &:checked~.refinements-label::before {
+         transform: rotate(90deg);
+      }
+   }
+
+   &-label {
+      @include font_stack('Montserrat', 13px, $blue01, $regular, 40px);
+      @include icon(arrow);
+
+      position: relative;
+      display: block;
+      padding: 0 20px;
+
+      &::before {
+         font-size: 13px;
+         color: $blue04;
+         position: absolute;
+         right: 20px;
+         top: 0;
+      }
+
+      &:hover {
+         cursor: pointer;
+      }
+   }
+
+   &-sublist {
+      display: none;
+      background: $grey09;
+   }
+
+   &-subitem {
+      &+& {
+         border-top: 1px solid $blue07;
+      }
+   }
+
+   &-sublink {
+      @include font_stack('Montserrat', 11px, $grey06, $regular, 40px);
+
+      padding: 0 20px;
+      text-transform: uppercase;
+   }
+}

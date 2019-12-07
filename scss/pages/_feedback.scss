@@ -1,0 +1,71 @@
+.feedback {
+   background: $white01;
+   padding: 75px 0 90px;
+
+   &-inner {
+      @include site_width;
+
+      padding: 0 90px; // 8.11%;
+   }
+
+   &-title {
+      @include font_stack('Montserrat', 32px, $black02, $black);
+
+      text-align: center;
+      margin-bottom: 25px;
+   }
+
+   &-description {
+      @include font_stack('Crimson', 16px, $grey03);
+
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+   }
+
+   &-list {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &-item {
+      @include percentage(270);
+   }
+
+   &-author {
+      display: flex;
+      margin-bottom: 25px;
+
+      &-name {
+         @include font_stack('Montserrat', 14px, $blue01, $regular);
+
+         margin-bottom: 10px;
+         text-transform: capitalize;
+      }
+
+      &-position {
+         @include font_stack('Crimson', 14px, $grey03);
+
+         font-style: italic;
+      }
+   }
+
+   &-image {
+      &-wrapper {
+         width: 42px;
+         height: 42px;
+         border-radius: 50%;
+         overflow: hidden;
+         margin-right: 9%;
+      }
+   }
+
+   &-info {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &-quote {
+      @include font_stack('Crimson', 14px, $blue05, $regular, 24px);
+   }
+}

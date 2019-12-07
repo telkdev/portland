@@ -1,0 +1,32 @@
+// UTILS
+@import 'utils/icons-font.scss';
+@import 'utils/var.scss';
+@import 'utils/fonts.scss';
+@import 'utils/keyframes.scss';
+@import 'utils/mixins.scss';
+@import 'utils/inputs.scss';
+
+// GENERAL
+@import 'general/reset.scss';
+@import 'general/main.scss';
+
+// COMPONENTS
+@import 'components/header.scss';
+@import 'components/burger.scss';
+@import 'components/logo.scss';
+@import 'components/nav.scss';
+@import 'components/minicart.scss';
+@import 'components/sign_in.scss';
+@import 'components/pagination.scss';
+@import 'components/social.scss';
+@import 'components/footer.scss';
+
+// PAGES
+@import 'pages/banner.scss';
+@import 'pages/filter.scss';
+@import 'pages/products.scss';
+@import 'pages/refinements/index.scss';
+@import 'pages/refinements/index.scss';
+@import 'pages/_product_grid.scss';
+@import 'pages/best_sellers.scss';
+@import 'pages/feedback.scss';

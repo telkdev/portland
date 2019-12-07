@@ -1,0 +1,5 @@
+.logo {
+	&-link {
+		@include font_stack('Satisfy', 25px, $blue03, $regular);
+	}
+}

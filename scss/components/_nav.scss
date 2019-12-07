@@ -1,0 +1,20 @@
+.nav {
+	flex: 1;
+
+	&-list {
+		display: flex;
+		justify-content: center;
+	}
+
+	&-item {
+		&+& {
+			margin-left: 2.56%;
+		}
+	}
+
+	&-link {
+		@include font_stack('Montserrat', 14px, $blue01, $regular);
+
+		text-transform: capitalize;
+	}
+}
