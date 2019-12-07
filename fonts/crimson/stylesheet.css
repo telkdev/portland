@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Crimson Text';
+    src: url('CrimsonText-Italic.eot');
+    src: url('CrimsonText-Italic.eot?#iefix') format('embedded-opentype'),
+        url('CrimsonText-Italic.woff2') format('woff2'),
+        url('CrimsonText-Italic.woff') format('woff'),
+        url('CrimsonText-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
